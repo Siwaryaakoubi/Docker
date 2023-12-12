@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            display: none; /* Hide the default file input */
+        }
+
+        .custom-file-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #45a049;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VGG</h1>
+    <form action="http://localhost:5000/uploadervgg" method="POST" enctype="multipart/form-data">
+        <label for="vgg-file" class="custom-file-upload">
+            Select File
+        </label>
+        <input type="file" name="file" id="vgg-file" />
+        <input type="submit" />
+    </form>
+
+    <h1>SVM</h1>
+    <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
+        <label for="svm-file" class="custom-file-upload">
+            Select File
+        </label>
+        <input type="file" name="file" id="svm-file" />
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
